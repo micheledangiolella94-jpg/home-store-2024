@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-generator">
+            <!-- Header -->
+            <div class="header">
+                <h1>😂 Joke Generator</h1>
+                <p>Get a laugh with random jokes from around the web!</p>
+            </div>
+
+            <!-- Category Selection -->
+            <div class="category-section">
+                <label for="category">Select Category:</label>
+                <select id="category">
+                    <option value="general">General</option>
+                    <option value="programming">Programming</option>
+                    <option value="knock-knock">Knock Knock</option>
+                    <option value="random">Random</option>
+                </select>
+            </div>
+
+            <!-- Joke Display Area -->
+            <div class="joke-card" id="jokeCard">
+                <div class="joke-content">
+                    <p id="jokeText" class="joke-text">Click the button to get a joke!</p>
+                    <p id="jokeType" class="joke-type"></p>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="spinner" id="spinner" style="display: none;">
+                <div class="spin"></div>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <!-- Button Controls -->
+            <div class="button-group">
+                <button class="btn btn-primary" id="getJokeBtn" onclick="getJoke()">
+                    Get a Joke
+                </button>
+                <button class="btn btn-secondary" id="shareBtn" onclick="shareJoke()" style="display: none;">
+                    Share Joke
+                </button>
+                <button class="btn btn-secondary" id="copyBtn" onclick="copyJoke()">
+                    Copy Joke
+                </button>
+            </div>
+
+            <!-- Joke Counter -->
+            <div class="stats">
+                <p>Jokes Loaded: <span id="jokeCount">0</span></p>
+            </div>
+
+            <!-- Favorite Jokes Section -->
+            <div class="favorites-section">
+                <h2>❤️ My Favorite Jokes</h2>
+                <button class="btn btn-secondary" id="toggleFavBtn" onclick="toggleFavorites()">
+                    Show Favorites
+                </button>
+                <div id="favoritesList" class="favorites-list" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
