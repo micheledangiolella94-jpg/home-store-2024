@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Timezone Digital Clock</title>
+    <link rel="stylesheet" href="clock-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-app">
+            <!-- Header -->
+            <div class="header">
+                <h1>🕐 World Clock</h1>
+                <p>Track time across the globe</p>
+            </div>
+
+            <!-- Controls Section -->
+            <div class="controls">
+                <div class="time-format">
+                    <label>
+                        <input type="radio" name="format" value="24" checked> 24-Hour
+                    </label>
+                    <label>
+                        <input type="radio" name="format" value="12"> 12-Hour (AM/PM)
+                    </label>
+                </div>
+                
+                <div class="add-timezone">
+                    <select id="timezoneSelect">
+                        <option value="">+ Add Timezone</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Clock Display Area -->
+            <div class="clocks-container" id="clocksContainer">
+                <!-- Clocks will be added here dynamically -->
+            </div>
+
+            <!-- Footer Info -->
+            <div class="footer-info">
+                <p>💡 Click on any clock to remove it</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="clock-script.js"></script>
+</body>
+</html>
